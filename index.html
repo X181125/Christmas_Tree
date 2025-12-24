@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cây Thông Noel 3D với hiệu ứng hạt ánh sáng lung linh - Merry Christmas!">
+    <title>🎄 Cây Thông Noel 3D - Merry Christmas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+
+    <!-- UI Controls -->
+    <div class="ui-overlay">
+        <h1 class="title">🎄 Merry Christmas 🎄</h1>
+        <p class="subtitle">Dùng chuột để xoay • Cuộn để zoom</p>
+
+        <div class="controls">
+            <button id="btn-tree" class="control-btn active">
+                <span class="icon">🎄</span>
+                <span class="label">Cây Thông</span>
+            </button>
+            <button id="btn-heart" class="control-btn">
+                <span class="icon">❤️</span>
+                <span class="label">I Love U</span>
+            </button>
+            <button id="btn-auto" class="control-btn">
+                <span class="icon">🔄</span>
+                <span class="label">Tự động</span>
+            </button>
+        </div>
+
+        <div class="settings">
+            <label class="setting-item">
+                <span>Số hạt:</span>
+                <input type="range" id="particle-count" min="3000" max="20000" value="10000">
+                <span id="particle-count-value">10000</span>
+            </label>
+            <label class="setting-item">
+                <span>Tốc độ nhấp nháy:</span>
+                <input type="range" id="twinkle-speed" min="1" max="10" value="5">
+            </label>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="snowflake">❄️</div>
+            <p>Đang tải cây thông...</p>
+        </div>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
